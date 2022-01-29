@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Resultado</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+       </head>
+        <body>
+            <div class="container my-2">
+                <h1> Resultado</h1>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Categoria </th> 
+                            <th>IMC</th> 
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Peso bajo</td>  
+                            <td>Menos de 18.5</td>  
+                        </tr>
+                         <tr>
+                            <td>Peso Normal</td>  
+                            <td>18.5 - 24.9</td>  
+                        </tr>
+                        <tr>
+                            <td>Peso Alto</td>  
+                            <td> 25.0 - 29.9</td>  
+                        </tr>
+                        <tr>
+                            <td>Obesidad</td>  
+                            <td>Más de 30.0</td>  
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <br>
+             <div class="container my-2">
+                 <table class="table table-striped">
+                    <tbody>
+                        <tr>
+                            <td>Nombre:</td>  
+                            <td th:text="${nombre}"></td>  
+                        </tr>  
+                         <tr>
+                            <td>Estatura:</td>  
+                            <td th:text="${estatura}"></td>  
+                        </tr>  
+                        
+                         <tr>
+                            <td>Peso:</td>  
+                            <td th:text="${peso}"></td>  
+                        </tr> 
+                        <tr>
+                            <td th:text="${resultado}"></td>   
+                        </tr>
+                     </tbody>
+                 </table>  
+             </div>    
+              <br>
+             <a th:href="@{/}" class="btn btn-light">Regresar</a>   
+                
+      </body>
+ </html>
